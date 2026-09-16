@@ -1,11 +1,12 @@
 from django.http import HttpResponse,JsonResponse
+from django.shortcuts import render
 
 def index_view(request):
-    return HttpResponse ("<h1>Home page</h1>") 
+    return render (request,"index.html") 
 
 def about_view(request):
-    return HttpResponse ("<h1>about us </h1>")
+    return render (request,"about.html")
 
 
 def contact_view(request):
-    return HttpResponse ("<h1>contact us</h1>")
+    return render (request,"contact_us.html")
