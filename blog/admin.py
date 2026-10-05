@@ -6,7 +6,7 @@ from blog.models import Post
 class Postadmin(admin.ModelAdmin):
     date_hierarchy='created_date'
     empty_value_display='-empty-'
-    fields=('title','content')
+    fields=('title','content','status')
     list_display=('title','counted_views','status','published_date')
     list_filter=('published_date',)
     ordering_date=['created_date']
