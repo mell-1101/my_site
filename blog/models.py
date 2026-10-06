@@ -5,7 +5,7 @@ from django.db import models
 
 class Post(models.Model):
     #image
-    #AUTOR
+    #author
     #tag
     #category
     title=models.CharField(max_length=255, )
