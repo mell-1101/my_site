@@ -1,5 +1,6 @@
 from django.contrib import admin
 from blog.models import Post
+
 # Register your models here
 
 
@@ -11,4 +12,12 @@ class Postadmin(admin.ModelAdmin):
     list_filter=('published_date',)
     ordering_date=['created_date']
     search_fields=['title','content']
+
+class ContactAdmin(admin.ModelAdmin):
+    pass
+
 admin.site.register(Post,Postadmin)
+
+
+
+

@@ -18,5 +18,6 @@ class Post(models.Model):
 
     class Meta():
         ordering=['status']
+
     def __str__(self):
         return "{}_{}".format(self.title,self.id)
