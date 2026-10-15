@@ -1,5 +1,5 @@
 from django.contrib import admin
-from blog.models import Post
+from blog.models import Post,Category
 
 # Register your models here
 
@@ -7,8 +7,8 @@ from blog.models import Post
 class Postadmin(admin.ModelAdmin):
     date_hierarchy='created_date'
     empty_value_display='-empty-'
-    fields=('title','content','status','author','image')
-    list_display=('title','counted_views','status','published_date','author')
+    fields=('title','content','status','author','image','category')
+    list_display=('title','counted_views','status','published_date','author',)
     list_filter=('published_date','author')
     ordering_date=['created_date']
     search_fields=['title','content']
@@ -17,6 +17,8 @@ class ContactAdmin(admin.ModelAdmin):
     pass
 
 admin.site.register(Post,Postadmin)
+admin.site.register(Category)
+
 
 
 
